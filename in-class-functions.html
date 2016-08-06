@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My First Function</title>
+</head>
+<body>
+	
+	<script>
+
+	function adder(x,y,z) {
+		console.log(x+y+z);
+	}
+	function multiplier(x,y,z){
+		console.log(x*y*z);
+	}
+	function isString(x,y,z) {
+		if ((typeof x === "string") && (typeof y === "string") && (typeof z === "string")){
+			console.log("They are all strings!");
+		}
+		else {
+			console.log("They are not strings!");
+		}
+	}
+		var vowels = ['a', 'i', 'e', 'o', 'u'];
+			function vowelChecker(x) {
+			if (vowels.indexOf('x') > -1){
+  			alert("it's a vowel.");
+			}
+			else {
+				alert("It's not a vowel.");
+			}
+	}
+		
+		
+		console.log(adder)
+
+		console.log(multiplier)
+
+		console.log(vowelChecker)
+
+	</script>
+
+</body>
+</html>
