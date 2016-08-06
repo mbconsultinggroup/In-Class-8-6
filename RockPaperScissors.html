@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+<div id="game">
+
+</div>
+
+<script type="text/javascript">
+var startGame = confirm("Would you like to play Rock Paper Scissors?");
+ if (startGame) {
+    alert("Close and then type r for Rock, s for Scissors, p for Paper and we can start!");
+ }
+ else {
+    alert("Goodbye!");
+ }
+
+// Create an array that lists out all of the options
+var options = ['r','p','s'];
+
+// Captures Key Clicks
+document.onkeyup = function(event) {
+
+    // Determines which exact key was selected. Make it lowercase
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var userHasNotTyped = true;
+    if (userGuess==='r' || userGuess==='p'|| userGuess==='s') {
+        userHasNotTyped = false;
+        // Alerts with user guess
+        alert("User: "+userGuess);
+        // Create code to randomly choose one of the three options (Computer) 
+        var computerGuess = options[Math.floor(Math.random()*options.length)];
+
+        // Alerts with Computer guess
+        alert("Computer: "+computerGuess);
+
+        if(userGuess==='r'){
+            if(computerGuess==='r'){
+                alert('draw');
+            }
+            else if(computerGuess==='p'){
+                alert('user lost');
+            }
+            else
+            {//should be an 's'
+                alert('user won');
+            }
+
+        }
+        else if(userGuess==='p')
+        {
+            if(computerGuess==='r'){
+                alert('user won');
+            }
+            else if(computerGuess==='p'){
+                alert('draw');
+            }
+            else
+            {//should be an 's'
+                alert('user lost');
+            }
+        }
+        else
+        {//user selected 's'
+            if(computerGuess==='r'){
+                alert('user lost');
+            }
+            else if(computerGuess==='p'){
+                alert('user won');
+            }
+            else
+            {//should be an 's'
+                alert('draw');
+            }
+        }
+
+    }
+    else
+    {
+        alert("Invalid Choice");
+     
+    }    
+}
+
+</script>
+</body>
+</html>

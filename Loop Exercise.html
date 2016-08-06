@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loop Exercise</title>
+</head>
+<body>
+	<script>
+
+	var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+myFarm.forEach(function (item, index, array) {
+    console.log(item, index);
+     console.log(array);
+     });
+	
+		for (var i = 0; i < myFarm.length; i++) {
+			alert(myFarm[i]);
+			if(myFarm[i].charAt(0)=="c" || myFarm[i].charAt(0)=="o") {
+				alert("Starts with a c or an o");
+			}
+		}
+
+	</script>
+</body>
+</html>
